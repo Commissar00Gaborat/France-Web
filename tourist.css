@@ -1,0 +1,150 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: verdana;
+}
+#background {
+  background-image: url(tourist.jpg),
+  -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 1%,
+    rgba(0, 0, 0, 0.5) 35%,
+    rgba(0, 0, 0, 0.5) 100%,
+    rgba(255, 0, 0, 0.5)
+    );
+    background-blend-mode: color;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  animation: transitionIn 0.75s;
+}
+.Bar {
+  width: 85%;
+  margi: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 400px;
+  cursor: pointer;
+}
+.Bar  ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+  text-shadow: 0 0 10px black;
+}
+.Bar  ul li a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+.Bar  ul li a::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #005996;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.Bar  ul li a:hover:after {
+  width: 100%;
+}
+.front {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.front h1 {
+  font-size: 70px;
+  mmargin-top: 80px;
+  background-image: linear-gradient(20deg, blue, white, red);
+  -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                text-shadow: 0 0 90px white;
+}
+.front p {
+   mmargi: 20px auto;
+   line-height: 25px;
+   line-height: 25px;
+  background-image: linear-gradient(20deg,white,white);
+  -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                text-shadow: 0 0 20px white;
+                animation: transitionIn 0.75s;
+}
+#Container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.Container {
+  display: flex;
+}
+.card {
+  height: 500px;
+  margin: 50px;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+}
+.pic {
+  height: 500px;
+  width: 350px;
+  border-radius: 3px;
+}
+.intro {
+  height: 70px;
+  width: 350px;
+  padding: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: -735px;
+  background: rgb(27, 27, 27, .5);
+  color: white;
+  transition: .5s;
+}
+h1 {
+  margin: 10px;
+  font-size: 40px;
+}
+.ye {
+  margin: 10px;
+  font-size: 20px;
+  visibility: hidden;
+  opacity: 0;
+}
+.card:hover {
+  cursor: pointer;
+}
+.card:hover .intro {
+  height: 220px;
+  bottom: -730px;
+  background: black;
+}
+.card:hover .ye {
+  opacity: 1;
+  visibility: visible;
+}
+.card:hover .pic {
+  transform: scale(1.1) rotate(-3deg);
+}
+@keyframes transitionIn {
+  from{
+      opacity: 0;
+      transform: rotateX(-10deg);
+  }
+  to{
+    opacity: 1;
+    transform: rotateX(0);
+  }

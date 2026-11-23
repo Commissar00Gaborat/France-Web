@@ -1,0 +1,134 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  }
+
+  .Bar {
+    width: 85%;
+    margi: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 400px;
+    cursor: pointer;
+  }
+  .Bar  ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    text-shadow: 0 0 4px black;
+  }
+  .Bar  ul li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+  }
+  .Bar  ul li a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #005996;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  .Bar  ul li a:hover:after {
+    width: 100%;
+  }
+  .row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+  }
+  .col {
+    flex-basis: 50%
+  }
+  h1{
+    color: #fff;
+    font-size: 100px;
+        animation: transitionIn 0.75s;
+  }
+.card {
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+      animation: transitionIn 0.75s;
+}
+.card1 {
+  background-image: url(caesar.jpg);
+      animation: transitionIn 0.75s;
+}
+.card2 {
+  background-image: url(clovis.jpg);
+      animation: transitionIn 0.75s;
+}
+.card3 {
+  background-image: url(Charlemagne.jpg);
+      animation: transitionIn 0.75s;
+}
+.card4 {
+  background-image: url(dark.jpg);
+      animation: transitionIn 0.75s;
+}
+.card5 {
+  background-image: url(verdun.jpg);
+      animation: transitionIn 0.75s;
+}
+.card6 {
+  background-image: url(louis.jpg);
+      animation: transitionIn 0.75s;
+}
+.card7 {
+  background-image: url(Revolution.png);
+      animation: transitionIn 0.75s;
+}
+.card8 {
+  background-image: url(sheesh.jpg);
+      animation: transitionIn 0.75s;
+}
+.card:hover{
+  transform: translateY(-10px);
+}
+h5 {
+mmargin: 0;
+padding: 0;
+font-family: verdana;
+font-size: 20px;
+color: #fff;
+text-transform: uppercase;
+text-align: center;
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+  text-shadow: 0 0 5px #000;
+}
+span {
+  background-image: linear-gradient(20deg, blue, white, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@keyframes transitionIn {
+  from{
+      opacity: 0;
+      transform: rotateX(-10deg);
+  }
+  to{
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}

@@ -1,0 +1,203 @@
+
+  #background {
+    background-image: url(rata.jpg),
+    -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 1%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.5) 100%,
+      rgba(255, 0, 0, 0.5)
+      );
+      background-blend-mode: color;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    animation: transitionIn 0.75s;
+  }
+  .Bar {
+    width: 85%;
+    margi: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 400px;
+    cursor: pointer;
+  }
+  .Bar  ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    text-shadow: 0 0 4px black;
+  }
+  .Bar  ul li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+  }
+  .Bar  ul li a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #005996;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  .Bar  ul li a:hover:after {
+    width: 100%;
+  }
+  .col {
+    flex-basis: 50%
+  }
+  #why {
+    margin: 0;
+    padding: 0;
+  }
+ .text{
+      position: absolute;
+      top: 250px;
+      left: 5%;
+  }
+
+ .text .word{
+      color: #cfcfcf;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-shadow: 0 0 5px white;
+  }
+
+  .text h1{
+      font-size: 50px;
+      color: #fff;
+      line-height: 65px;
+      text-shadow: 0 0 5px white;
+  }
+
+ .text h1 span{
+      color: #321414;
+      text-shadow: 0 0 5px #a0522d;
+  }
+
+  .text .textarea{
+      width: 600px;
+      margin-top: 20px;
+      color: #cfcfcf;
+      text-align: justify;
+      line-height: 25px;
+      text-shadow: 0 0 5px white;
+  }
+  #Container {
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   background-image: url(Cooking.gif),
+   -webkit-linear-gradient(
+     top,
+     rgba(0, 0, 0, 0.5) 0%,
+     rgba(0, 0, 0, 0.5) 1%,
+     rgba(0, 0, 0, 0.5) 35%,
+     rgba(0, 0, 0, 0.5) 100%,
+     rgba(255, 0, 0, 0.5)
+     );
+     background-blend-mode: color;
+   background-size: cover;
+   background-position: center;
+   flex-wrap: wrap;
+  }
+  .card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+}
+
+.card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.card .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.card .front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0, 0, 0, .4);
+  text-align: center;
+}
+
+.card .back {
+  transform: perspective(600px) rotateY(180deg);
+  background: #3d251e;
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+  border-top: solid 1px #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+
+.card .backc .link a {
+  color: #f3f3f3;
+}
+
+.card .back h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.card .back p {
+  letter-spacing: 1px;
+}
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+      @keyframes transitionIn {
+        from{
+            opacity: 0;
+            transform: rotateX(-10deg);
+        }
+        to{
+          opacity: 1;
+          transform: rotateX(0);
+        }
+      }
